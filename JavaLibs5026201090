@@ -1,0 +1,49 @@
+import javax.swing.JOptionPane;
+
+public class JavaLibs5026201090 {
+    public static void main( String[] args ) {
+        JOptionPane.showMessageDialog(null, "Hey guys. Welcome to \"Make your own story.\"" +
+                "we will ask you 10 question. Are you ready?");
+        String name =(String)JOptionPane.showInputDialog(null, "What is your name?", "Question 1", 3, null, null, "String");
+
+        String favRestaurant=(String)JOptionPane.showInputDialog(null,"What is Your Favorite Restaurant?","Question 2",
+                3,null, null, "String" );
+
+        String favFood=(String)JOptionPane.showInputDialog(null,"What is Your Favorite Food in " + favRestaurant +"?",
+                "Question 3", 3,null, null, "String" );
+
+        String price=(String)JOptionPane.showInputDialog(null,"How much is the total price for that lunch?","Question 4",
+                3, null, null, "int");
+        int totalPrice = Integer.parseInt(price);
+
+        String tip=(String)JOptionPane.showInputDialog(null, "What number do you like? ","Question 5", 3, null,
+                null, "double");
+        double totalTip = Double.parseDouble(tip);
+
+        String mammals=(String)JOptionPane.showInputDialog(null,"Name an mammals.","Question 6", 3,null, null, "String" );
+
+        String descmammals=(String)JOptionPane.showInputDialog(null,"What word would you use to describe a " + mammals
+                +"?", "Question 7", 3,null, null, "String" );
+
+        String fish=(String)JOptionPane.showInputDialog(null,"Name an fish.","Question 8", 3,null, null, "String" );
+
+        String descfish=(String)JOptionPane.showInputDialog(null,"What word would you use to describe a " + fish
+                +"?", "Question 9", 3,null, null, "String" );
+
+        String place=(String)JOptionPane.showInputDialog(null, "What place do you want to come?", "Question 10", 3, null,
+                null, "String");
+
+        JOptionPane.showMessageDialog(null, "Congratulation " + name + ". Your story is done. Are you ready to read it?"
+                + " Here we go!");
+
+        JOptionPane.showMessageDialog(null,
+                "I have a lot to tell you about my trip with " + name + "! First we had lunch at " + favRestaurant + ". \n"
+                + name +"'s favorite food is " + favFood + " and I like it. The total price is " + totalPrice + " but we "
+                + "\nget 10% discount so we paid " + (totalPrice*90/100) + " and I insisted on leaving a $" + totalTip + " tip!"
+                + "\nAfter that, we go to zoo because " + name + " want to see the animals there. \nWe see how " + descmammals +
+                " " + mammals + " was. We also see how " + descfish + " " + fish + " was." + "\nWe ended the trip with ride" +
+                " a motorcycle to " + place + " and spend the night there." + "\nI really have fun in this trip with " + name
+                + " and want " + name + " to take me on the next trip.", "Memorable Trip", 1 );
+
+    }
+}
